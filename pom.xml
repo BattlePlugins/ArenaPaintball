@@ -79,8 +79,14 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>battleplugins-repo</id>
-            <url>scp://server.battleplugins.com/var/www/server.battleplugins.com/htdocs/maven</url>
+            <id>central</id>
+            <name>BattlePlugins Maven Server-releases</name>
+            <url>https://repo.battleplugins.org/artifactory/libs-release-local</url>
         </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>BattlePlugins Maven Server-snapshots</name>
+            <url>https://repo.battleplugins.org/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>
