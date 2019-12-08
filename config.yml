@@ -1,2 +1,5 @@
 ## Set the damage of the paintballs
 damage: 20
+
+## If friendly fire should be enabled
+friendlyFire: true

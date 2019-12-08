@@ -4,10 +4,12 @@
     <groupId>mc.alk</groupId>
     <artifactId>ArenaPaintball</artifactId>
     <packaging>jar</packaging>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <name>ArenaPaintball</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <url>http://maven.apache.org</url>
     <!-- Locations for jar repositories -->
