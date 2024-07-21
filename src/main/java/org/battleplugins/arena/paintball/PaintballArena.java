@@ -205,6 +205,9 @@ public class PaintballArena extends Arena {
                 }
 
                 player.damage(10000, projectile);
+                if (paintball.getHitSound() != null && projectile.getShooter() instanceof Player shooter) {
+                    shooter.playSound(shooter.getLocation(), paintball.getHitSound(), 1, 1);
+                }
             }
         }
 
