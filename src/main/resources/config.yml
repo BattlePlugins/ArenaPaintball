@@ -1,0 +1,62 @@
+# -----------------
+# Main configuration for ArenaPaintball
+#
+# Documentation: https://docs.battleplugins.org/books/additional-gamemodes/chapter/paintball
+# Support: https://discord.gg/tMVPVJf
+# GitHub: https://github.com/BattlePlugins/ArenaPaintball
+# -----------------
+config-version: 2.0 # The config version, do not change!
+
+# The paintballs used for Paintball.
+paintballs:
+  standard:
+    item: snowball{display-name=<white>Paintball}
+    hit-sound: entity.experience_orb.pickup
+  standard-color:
+    item: snowball{display-name=<white>Paintball}
+    hit-sound: entity.experience_orb.pickup
+    color-map: true
+    color-radius: 2
+  triple-shot:
+    item: snowball{display-name=<white>Triple Shot Paintball}
+    hit-sound: entity.experience_orb.pickup
+    particle: witch
+    spread-horizontal: 1
+    spread-vertical: 0
+    projectile-count: 3
+  meteor:
+    item: fire_charge{display-name=<gold><b>Meteor}
+    display-item: fire_charge
+    launch-sound: entity.ender_dragon.growl
+    hit-sound: entity.ender_dragon.hurt
+    particle: flame
+    spread-horizontal: 1
+    spread-vertical: 1
+    projectile-count: 100
+    use-item: true
+  paintball-blaster:
+    item: iron_horse_armor{display-name=<aqua><b>Paintball Blaster}
+    display-item: ender_pearl
+    launch-sound: entity.blaze.shoot
+    hit-sound: entity.generic.explode
+    particle: smoke
+    spread-horizontal: 0.5
+    spread-vertical: 0.5
+    projectile-count: 15
+    use-item: false
+    cooldown: 5s
+  grenade:
+    item: firework_star{display-name=<yellow><b>Grenade}
+    display-item: firework_star
+    launch-sound: entity.magma_cube.jump
+    hit-sound: entity.creeper.primed
+    particle: angry_villager
+    velocity: 0.5
+    damage-radius: 3
+
+# Whether pvp is disabled in the Paintball arena.
+disable-pvp: true
+
+# Whether to send a cooldown message when a player tries to use a paintball
+# while it is on cooldown.
+send-cooldown-message: true

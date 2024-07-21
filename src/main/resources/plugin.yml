@@ -1,0 +1,9 @@
+name: ArenaPaintball
+main: org.battleplugins.arena.paintball.ArenaPaintball
+version: ${version}
+description: A Paintball mode for BattleArena.
+author: BattlePlugins
+website: https://battleplugins.org
+api-version: 1.19
+depend: [BattleArena]
+softdepend: [WorldEdit]
