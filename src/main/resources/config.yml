@@ -17,6 +17,13 @@ paintballs:
     hit-sound: entity.experience_orb.pickup
     color-map: true
     color-radius: 2
+  standard-light:
+    item: snowball{display-name=<white>Paintball}
+    hit-sound: entity.experience_orb.pickup
+    paintball-damage: 5.0
+    hit-effects:
+      - particle{particle=angry_villager;speed=0.01;count=15;offset=0.3,0.7,0.3}
+      - freeze{duration=5s}
   triple-shot:
     item: snowball{display-name=<white>Triple Shot Paintball}
     hit-sound: entity.experience_orb.pickup

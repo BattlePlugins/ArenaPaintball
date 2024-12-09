@@ -4,6 +4,7 @@ import org.battleplugins.arena.Arena;
 import org.battleplugins.arena.ArenaPlayer;
 import org.battleplugins.arena.competition.map.options.Bounds;
 import org.battleplugins.arena.event.ArenaEventHandler;
+import org.battleplugins.arena.util.CustomEffect;
 import org.battleplugins.arena.util.ItemColor;
 import org.battleplugins.arena.util.Util;
 import org.bukkit.DyeColor;
@@ -85,8 +86,11 @@ public class PaintballArena extends Arena {
         }
 
         if (projectile.getShooter() instanceof Player damager) {
-            event.setDamage(10000);
+            for (CustomEffect<?> effect : paintball.getHitEffects()) {
+                effect.play(event.getEntity());
+            }
 
+            event.setDamage(paintball.getPaintballDamage());
             if (paintball.getHitSound() != null) {
                 damager.playSound(damager.getLocation(), paintball.getHitSound(), 1, 1);
             }
@@ -204,7 +208,11 @@ public class PaintballArena extends Arena {
                     continue;
                 }
 
-                player.damage(10000, projectile);
+                for (CustomEffect<?> effect : paintball.getHitEffects()) {
+                    effect.play(player);
+                }
+
+                player.damage(paintball.getPaintballDamage(), projectile);
                 if (paintball.getHitSound() != null && projectile.getShooter() instanceof Player shooter) {
                     shooter.playSound(shooter.getLocation(), paintball.getHitSound(), 1, 1);
                 }

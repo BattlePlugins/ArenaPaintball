@@ -1,10 +1,12 @@
 package org.battleplugins.arena.paintball;
 
 import org.battleplugins.arena.config.ArenaOption;
+import org.battleplugins.arena.util.CustomEffect;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
 import java.time.Duration;
+import java.util.List;
 
 public class Paintball {
 
@@ -49,6 +51,12 @@ public class Paintball {
 
     @ArenaOption(name = "damage-radius", description = "The radius of the damage when a paintball hits the ground.")
     private double damageRadius;
+
+    @ArenaOption(name = "paintball-damage", description = "The amount of damage a paintball does.")
+    private double paintballDamage = 10000;
+
+    @ArenaOption(name = "hit-effects", description = "The effects that will be played when a player is hit by a paintball.")
+    private List<CustomEffect<?>> hitEffects;
 
     public ItemStack getItem() {
         return this.item;
@@ -108,5 +116,13 @@ public class Paintball {
 
     public double getDamageRadius() {
         return this.damageRadius;
+    }
+
+    public double getPaintballDamage() {
+        return this.paintballDamage;
+    }
+
+    public List<CustomEffect<?>> getHitEffects() {
+        return this.hitEffects == null ? List.of() : List.copyOf(this.hitEffects);
     }
 }
