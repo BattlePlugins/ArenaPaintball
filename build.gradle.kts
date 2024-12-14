@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "org.battleplugins.arena"
-version = "2.0.0-SNAPSHOT"
+version = "2.0.0"
 
 val supportedVersions = listOf(
     "1.19.4",
