@@ -88,6 +88,7 @@ phases:
     options:
       - block-interact{enabled=true}
       - team-selection{enabled=false}
+      - damage-players{option=other_team}
     events:
       on-start:
         - team-heads
